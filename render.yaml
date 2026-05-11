@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: jobsphere-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ADZUNA_APP_ID
+        value: be7a9442
+      - key: ADZUNA_APP_KEY
+        value: 1128b1012a494fdda131cf149247c9f3
