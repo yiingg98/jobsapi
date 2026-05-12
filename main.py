@@ -23,7 +23,7 @@ ADZUNA_APP_KEY = os.getenv("ADZUNA_APP_KEY", "1128b1012a494fdda131cf149247c9f3")
 ADZUNA_BASE = "https://api.adzuna.com/v1/api"
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {
         "name": "JobSphere API",
